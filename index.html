@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetingPicker - Share Your Availability in Seconds</title>
+    <meta name="description" content="Select Google Calendar slots, convert timezones, copy formatted text. Free Chrome extension, no links needed.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 32px;
+            padding: 0 20px;
+        }
+
+        .description p {
+            margin-bottom: 16px;
+            color: #444;
+        }
+
+        .features {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .features h2 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: #1a1a2e;
+        }
+
+        .features ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 2px solid #e9ecef;
+        }
+
+        .privacy-note {
+            text-align: center;
+            padding: 16px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            color: #2e7d32;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .developer-info {
+            margin-top: 16px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <header class="header">
+                <div class="logo">📅</div>
+                <h1>MeetingPicker</h1>
+                <p class="tagline">Share your availability in seconds</p>
+            </header>
+
+            <div class="description">
+                <p><strong>Tired of typing "I'm free Tuesday at 2pm, 3pm, or Thursday at 10am..." into every email?</strong></p>
+                <p>MeetingPicker lets you select time slots directly from Google Calendar and copy perfectly formatted availability in seconds.</p>
+                <p>Unlike Calendly or Cal.com, there's no link to share, no signup required for recipients, no back-and-forth. Just clean, formatted text they can read instantly.</p>
+            </div>
+
+            <div class="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Click-and-drag selection on week view</li>
+                    <li>Select any slot — empty or busy</li>
+                    <li>Automatic timezone detection</li>
+                    <li>Convert to recipient's timezone</li>
+                    <li>7 format options to choose from</li>
+                    <li>One-click copy to clipboard</li>
+                </ul>
+            </div>
+
+            <div class="privacy-note">
+                🔒 <strong>100% Free & Private</strong> — No data collection, no external servers, runs entirely in your browser
+            </div>
+
+            <div class="cta-section">
+                <a href="https://chromewebstore.google.com/detail/meetingpicker/lfkmceoigpfppfodkemkbjmoiabomkfg" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-3.952 6.848a12.014 12.014 0 0 0 9.76-4.106A11.947 11.947 0 0 0 24 12c0-.262-.008-.522-.025-.78z"/></svg>
+                    Install from Chrome Web Store
+                </a>
+                <a href="https://buymeacoffee.com/meetingpicker" class="btn btn-secondary">
+                    ☕ Support Development
+                </a>
+            </div>
+
+            <footer>
+                <div class="footer-links">
+                    <a href="mailto:support@meetingpicker.com">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="developer-info">
+                    Developed by Matthew Seelig
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
